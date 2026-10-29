@@ -6,6 +6,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Découvrez les ateliers SkillHub et développez vos compétences.">
   <title>SkillHub - Ateliers de formation</title>
+  <style>
+    :root {
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      font-size: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #075985;
+    }
+
+    body > a {
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-areas:
+        "accroche"
+        "valeurs"
+        "ateliers"
+        "formateurs"
+        "inscription";
+      gap: 1rem;
+      max-width: 75rem;
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
+
+    section {
+      min-width: 0;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background: #fff;
+      box-shadow: 0 0.25rem 1rem rgb(15 23 42 / 8%);
+    }
+
+    #accroche {
+      grid-area: accroche;
+      background: #e0f2fe;
+    }
+
+    #valeurs {
+      grid-area: valeurs;
+    }
+
+    #ateliers {
+      grid-area: ateliers;
+    }
+
+    #formateurs {
+      grid-area: formateurs;
+    }
+
+    #inscription {
+      grid-area: inscription;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      max-width: 65ch;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    #valeurs ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    #valeurs li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #valeurs svg {
+      flex: 0 0 2.5rem;
+    }
+
+    .atelier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+      gap: 1rem;
+    }
+
+    .atelier-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+    }
+
+    .atelier-card h3 {
+      margin-top: 0;
+    }
+
+    .atelier-card a,
+    button {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.65rem 1rem;
+      border: 0;
+      border-radius: 0.375rem;
+      background: #075985;
+      color: #fff;
+      font: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #formateurs article {
+      margin-top: 1.5rem;
+    }
+
+    #formateurs img {
+      max-width: 30rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 30rem;
+    }
+
+    form div {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #94a3b8;
+      border-radius: 0.375rem;
+      font: inherit;
+    }
+
+    @media (min-width: 48rem) {
+      main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+          "accroche accroche"
+          "valeurs ateliers"
+          "formateurs formateurs"
+          "inscription inscription";
+        gap: 1.5rem;
+      }
+
+      #formateurs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+        gap: 1rem;
+      }
+
+      #formateurs h2 {
+        grid-column: 1 / -1;
+      }
+
+      #formateurs article {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 64rem) {
+      #accroche {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      #accroche h1,
+      #accroche p {
+        grid-column: 1;
+      }
+
+      #accroche img {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -114,15 +326,19 @@
     <section id="ateliers">
       <h2>Découvrez nos ateliers</h2>
 
-      <article>
-        <h3>Atelier HTML</h3>
-        <p>Apprenez à structurer une page web.</p>
-      </article>
+      <div class="atelier-grid">
+        <article class="atelier-card">
+          <h3>Atelier HTML</h3>
+          <p>Apprenez à structurer une page web.</p>
+          <a href="#inscription">S'inscrire</a>
+        </article>
 
-      <article>
-        <h3>Atelier Python</h3>
-        <p>Découvrez les bases de la programmation.</p>
-      </article>
+        <article class="atelier-card">
+          <h3>Atelier Python</h3>
+          <p>Découvrez les bases de la programmation.</p>
+          <a href="#inscription">S'inscrire</a>
+        </article>
+      </div>
     </section>
 
     <!-- 4. SECTION FORMATEURS -->
