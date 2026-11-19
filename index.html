@@ -428,47 +428,8 @@
     </form>
   </dialog>
 
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.getElementById("menu");
-    const modal = document.querySelector("#modal");
-    const openModalButton = document.getElementById("open-modal");
-    const closeModalButton = document.getElementById("close-modal");
 
-    /* --- Menu --- */
-    menuToggle.addEventListener("click", () => {
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-      menu.hidden = isExpanded;
-    });
+      <script src="script.js" defer></script>
 
-    menu.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement) {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-      }
-    });
-
-    /* Échap ferme le menu (y compris quand le focus est sur le bouton) */
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !menu.hidden) {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-        menuToggle.focus();
-      }
-    });
-
-    /* --- Modale --- */
-    openModalButton.addEventListener("click", () => {
-      // showModal() : la modale passe en top layer, le reste devient inert,
-      // Échap et le piège à focus sont gérés nativement.
-      modal.showModal();
-    });
-
-    closeModalButton.addEventListener("click", () => {
-      modal.close();
-      openModalButton.focus();
-    });
-  </script>
 </body>
 </html>
