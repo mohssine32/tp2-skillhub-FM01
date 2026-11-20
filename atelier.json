@@ -1,0 +1,16 @@
+[
+  { "id": 1,  "titre": "Initiation à la photographie numérique",                             "niveau": "débutant",      "prix": 120, "places": 12, "formateur": "Camille Duval" },
+  { "id": 2,  "titre": "Photoshop : retouche avancée",                                        "niveau": "avancé",        "prix": 380, "places": 8,  "formateur": "Yann Lefèvre" },
+  { "id": 3,  "titre": "Découverte de l'aquarelle",                                           "niveau": "débutant",      "prix": 95,  "places": 15, "formateur": "Sophie Marchand" },
+  { "id": 4,  "titre": "Cuisine moléculaire et gastronomie créative : les fondamentaux",      "niveau": "intermédiaire", "prix": 240, "places": 6,  "formateur": "Julien Roussel" },
+  { "id": 5,  "titre": "Yoga du soir — respiration et relaxation",                            "niveau": "débutant",      "prix": 60,  "places": 20, "formateur": "Amina Belkacem" },
+  { "id": 6,  "titre": "JavaScript moderne : async/await en profondeur",                      "niveau": "avancé",        "prix": 450, "places": 10, "formateur": "Thomas Girard" },
+  { "id": 7,  "titre": "Céramique : tournage et émaillage",                                   "niveau": "intermédiaire", "prix": 210, "places": 8,  "formateur": "Léa Fontaine" },
+  { "id": 8,  "titre": "Prise de parole en public",                                           "niveau": "intermédiaire", "prix": 180, "places": 12, "formateur": "Marc-Olivier Petit" },
+  { "id": 9,  "titre": "Introduction à la programmation Python",                              "niveau": "débutant",      "prix": 150, "places": 25, "formateur": "Nadia Cherif" },
+  { "id": 10, "titre": "Guitare folk — niveau confirmé",                                      "niveau": "avancé",        "prix": 320, "places": 5,  "formateur": "Antoine Beaulieu" },
+  { "id": 11, "titre": "Écriture créative : trouver sa voix",                                 "niveau": "intermédiaire", "prix": 140, "places": 10, "formateur": "Claire Vasseur" },
+  { "id": 12, "titre": "Bricolage : réparer plutôt que jeter",                                "niveau": "débutant",      "prix": 75,  "places": 14, "formateur": "Karim Benali" },
+  { "id": 13, "titre": "Design d'interface : Figma de A à Z",                                 "niveau": "intermédiaire", "prix": 280, "places": 10, "formateur": "Élise Moreau" },
+  { "id": 14, "titre": "Vinification : comprendre les terroirs",                              "niveau": "avancé",        "prix": 360, "places": 6,  "formateur": "Bernard Laporte" }
+]
